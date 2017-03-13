@@ -233,7 +233,7 @@ namespace NadekoBot.Services
             {
                 try
                 {
-                    if (msg.Author.IsBot || !NadekoBot.Ready) //no bots, wait until bot connected and initialized
+                    if (!NadekoBot.Ready) // wait until bot connected and initialized
                         return;
 
                     var execTime = Environment.TickCount;
